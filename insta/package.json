@@ -1,0 +1,15 @@
+{
+  "name": "insta",
+  "version": "1.0.0",
+  "main": "cadastro.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://mariaottoni0809.github.io/Penguinismo/"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

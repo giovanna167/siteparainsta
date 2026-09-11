@@ -1,0 +1,1098 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* =========================================
+   VARIÁVEIS
+========================================= */
+
+:root {
+    --fundo: #07090d;
+    --fundo-card: #10151d;
+    --texto: #f4f7fb;
+    --texto-secundario: #9ca8b8;
+    --azul: #8acbff;
+    --borda: rgba(255, 255, 255, 0.09);
+}
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 80% 0%,
+            rgba(95, 184, 255, 0.12),
+            transparent 30rem
+        ),
+        var(--fundo);
+
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    width: min(1120px, calc(100% - 40px));
+    height: 78px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+.logo-ponto {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+    background: var(--azul);
+    box-shadow: 0 0 20px var(--azul);
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: var(--texto-secundario);
+    font-size: 0.85rem;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    color: var(--azul);
+}
+
+.menu-mobile {
+    display: none;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    width: min(1120px, calc(100% - 40px));
+    min-height: 650px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    gap: 40px;
+    padding: 60px 0 90px;
+}
+
+.tag {
+    color: var(--azul);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+.hero h1 {
+    margin: 20px 0 25px;
+
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.06em;
+}
+
+.hero h1 span {
+    color: var(--azul);
+}
+
+.hero-text > p {
+    max-width: 590px;
+    color: var(--texto-secundario);
+    font-size: 1.05rem;
+}
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.botao {
+    min-height: 50px;
+    padding: 0 23px;
+
+    border-radius: 14px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+}
+
+.principal {
+    background: var(--azul);
+    color: #071019;
+}
+
+.principal:hover {
+    box-shadow: 0 10px 30px rgba(138, 203, 255, 0.18);
+}
+
+.secundario {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--borda);
+}
+
+.secundario:hover {
+    border-color: rgba(138, 203, 255, 0.3);
+}
+
+.escuro {
+    background: #071019;
+    color: white;
+}
+
+.escuro:hover {
+    background: #101c28;
+}
+
+/* =========================================
+   HERO — PINGUIM
+========================================= */
+
+.hero-imagem {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.brilho {
+    width: 330px;
+    height: 330px;
+
+    border-radius: 50%;
+
+    background: rgba(100, 190, 255, 0.15);
+
+    filter: blur(55px);
+
+    position: absolute;
+}
+
+/* PINGUIM COM CORES ORIGINAIS */
+
+.hero-imagem img {
+    position: relative;
+
+    width: min(430px, 90%);
+    max-height: 500px;
+
+    object-fit: contain;
+
+    mix-blend-mode: normal;
+
+    filter:
+        drop-shadow(
+            0 25px 35px rgba(0, 0, 0, 0.55)
+        );
+
+    animation:
+        flutuar 4s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* =========================================
+   NOSSA HISTÓRIA
+========================================= */
+
+.historia {
+    width: min(1120px, calc(100% - 40px));
+
+    margin: auto;
+
+    padding: 115px 0;
+
+    scroll-margin-top: 40px;
+}
+
+.historia-conteudo {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+.historia-titulo {
+    position: sticky;
+    top: 100px;
+}
+
+.historia-titulo h2 {
+    font-size: clamp(
+        2.5rem,
+        5vw,
+        4.3rem
+    );
+
+    line-height: 1.05;
+
+    letter-spacing: -0.055em;
+
+    margin-top: 18px;
+}
+
+.historia-titulo h2 span {
+    color: var(--azul);
+}
+
+.historia-texto {
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+.historia-texto p {
+    color: var(--texto-secundario);
+
+    font-size: 1rem;
+
+    line-height: 1.85;
+}
+
+.historia-texto strong {
+    color: #dceeff;
+}
+
+/* =========================================
+   DESTAQUES DA HISTÓRIA
+========================================= */
+
+.historia-destaques {
+    margin-top: 75px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.historia-item {
+    padding: 28px;
+
+    min-height: 210px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    border: 1px solid var(--borda);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.historia-item:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(138, 203, 255, 0.3);
+}
+
+.historia-item strong {
+    color: var(--azul);
+
+    font-size: 0.75rem;
+
+    letter-spacing: 0.1em;
+}
+
+.historia-item h3 {
+    margin: 20px 0 10px;
+
+    font-size: 1.15rem;
+}
+
+.historia-item p {
+    color: var(--texto-secundario);
+
+    font-size: 0.85rem;
+
+    line-height: 1.7;
+}
+
+/* =========================================
+   FRASE
+========================================= */
+
+.frase {
+    border-top: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+
+    padding: 20px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 40px;
+
+    color: #aeb9c8;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* =========================================
+   SEÇÕES
+========================================= */
+
+.secao {
+    width: min(1120px, calc(100% - 40px));
+
+    margin: auto;
+
+    padding: 115px 0;
+}
+
+.titulo-secao {
+    max-width: 700px;
+}
+
+.titulo-secao h2 {
+    font-size: clamp(
+        2.3rem,
+        5vw,
+        4rem
+    );
+
+    line-height: 1.05;
+
+    letter-spacing: -0.055em;
+
+    margin: 15px 0 20px;
+}
+
+.titulo-secao h2 span {
+    color: var(--azul);
+}
+
+.titulo-secao p {
+    color: var(--texto-secundario);
+}
+
+/* =========================================
+   CARDS
+========================================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+
+    margin-top: 45px;
+}
+
+.card {
+    padding: 30px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    border: 1px solid var(--borda);
+
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(138, 203, 255, 0.25);
+}
+
+.icone {
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+
+    background:
+        rgba(138, 203, 255, 0.12);
+
+    color: var(--azul);
+
+    font-size: 1.25rem;
+
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: var(--texto-secundario);
+
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   COMUNIDADE
+========================================= */
+
+.comunidade {
+    width: min(1120px, calc(100% - 40px));
+
+    margin: auto;
+
+    padding: 65px;
+
+    border-radius: 30px;
+
+    border: 1px solid var(--borda);
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(138, 203, 255, 0.12),
+            transparent 25rem
+        ),
+        var(--fundo-card);
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr 0.9fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.comunidade h2 {
+    font-size: clamp(
+        2.3rem,
+        5vw,
+        4rem
+    );
+
+    line-height: 1.05;
+
+    letter-spacing: -0.055em;
+
+    margin: 15px 0;
+}
+
+.comunidade-text p {
+    color: var(--texto-secundario);
+
+    max-width: 600px;
+}
+
+.comunidade .botao {
+    margin-top: 28px;
+}
+
+.mensagem {
+    padding: 35px;
+
+    border-radius: 22px;
+
+    border: 1px solid var(--borda);
+
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+.aspas {
+    color: var(--azul);
+
+    font-size: 4rem;
+
+    line-height: 0.5;
+}
+
+.mensagem p {
+    margin: 20px 0 15px;
+
+    font-size: 1.1rem;
+}
+
+.mensagem small {
+    color: var(--texto-secundario);
+}
+
+/* =========================================
+   RECURSOS
+========================================= */
+
+.lista-recursos {
+    margin-top: 45px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+}
+
+.recurso {
+    padding: 23px 0;
+
+    border-top: 1px solid var(--borda);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.recurso strong {
+    color: var(--azul);
+
+    font-size: 0.75rem;
+}
+
+.recurso span {
+    color: #dce4ed;
+}
+
+/* =========================================
+   CTA FINAL
+========================================= */
+
+.cta {
+    width: min(1120px, calc(100% - 40px));
+
+    min-height: 310px;
+
+    margin: 0 auto 110px;
+
+    padding: 40px 55px;
+
+    border-radius: 28px;
+
+    background: var(--azul);
+
+    color: #071019;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+
+    overflow: hidden;
+}
+
+/* =========================================
+   PINGUIM 2
+========================================= */
+
+.cta-pinguim {
+    width: 250px;
+
+    min-width: 250px;
+
+    height: 250px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: transparent;
+
+    border: none;
+}
+
+/* PINGUIM SEM ALTERAR AS CORES */
+
+.cta-pinguim img {
+    width: 250px;
+
+    height: 250px;
+
+    object-fit: contain;
+
+    display: block;
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    mix-blend-mode: normal;
+
+    filter: none;
+
+    opacity: 1;
+}
+
+/* =========================================
+   TEXTO CTA
+========================================= */
+
+.cta-text {
+    flex: 1;
+}
+
+.cta .tag {
+    color: #315c78;
+}
+
+.cta h2 {
+    font-size: clamp(
+        2rem,
+        4vw,
+        3.3rem
+    );
+
+    line-height: 1.05;
+
+    margin: 10px 0;
+
+    letter-spacing: -0.05em;
+}
+
+.cta p {
+    max-width: 620px;
+
+    color: #29485d;
+
+    margin-bottom: 22px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    width: min(1120px, calc(100% - 40px));
+
+    margin: auto;
+
+    padding: 35px 0 45px;
+
+    border-top: 1px solid var(--borda);
+
+    display: grid;
+
+    grid-template-columns:
+        1fr auto;
+
+    gap: 25px;
+}
+
+.footer-logo strong,
+.footer-logo span {
+    display: block;
+}
+
+.footer-logo strong {
+    font-size: 1.05rem;
+}
+
+.footer-logo span {
+    color: var(--texto-secundario);
+
+    font-size: 0.8rem;
+}
+
+.footer-links {
+    display: flex;
+
+    align-items: center;
+}
+
+.footer-links a {
+    color: var(--azul);
+
+    font-size: 0.8rem;
+}
+
+footer > p {
+    grid-column: 1 / -1;
+
+    color: #687485;
+
+    font-size: 0.7rem;
+}
+
+/* =========================================
+   ANIMAÇÕES
+========================================= */
+
+.card,
+.recurso,
+.mensagem,
+.historia-item {
+    opacity: 0;
+
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.card.aparecer,
+.recurso.aparecer,
+.mensagem.aparecer,
+.historia-item.aparecer {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+/* =========================================
+   MENU MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .menu {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        right: 20px;
+
+        width: 190px;
+
+        padding: 15px;
+
+        flex-direction: column;
+
+        gap: 5px;
+
+        border-radius: 16px;
+
+        background: #10151d;
+
+        border: 1px solid var(--borda);
+
+        box-shadow:
+            0 20px 40px rgba(0,0,0,0.35);
+
+        z-index: 100;
+    }
+
+    .menu.ativo {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 12px;
+
+        border-radius: 10px;
+    }
+
+    .menu a:hover {
+        background:
+            rgba(138, 203, 255, 0.08);
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    /* HERO */
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 45px;
+    }
+
+    .hero-text > p {
+        margin: auto;
+    }
+
+    .botoes {
+        justify-content: center;
+    }
+
+    .hero-imagem {
+        min-height: 380px;
+    }
+
+    .hero-imagem img {
+        width: 330px;
+
+        mix-blend-mode: normal;
+    }
+
+    /* HISTÓRIA */
+
+    .historia {
+        padding: 80px 0;
+    }
+
+    .historia-conteudo {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .historia-titulo {
+        position: static;
+    }
+
+    .historia-destaques {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        margin-top: 50px;
+    }
+
+    /* CARDS */
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* COMUNIDADE */
+
+    .comunidade {
+        grid-template-columns: 1fr;
+
+        padding: 40px 30px;
+    }
+
+    /* CTA */
+
+    .cta {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 40px 30px;
+
+        gap: 15px;
+    }
+
+    .cta-pinguim {
+        width: 200px;
+
+        min-width: 200px;
+
+        height: 200px;
+    }
+
+    .cta-pinguim img {
+        width: 200px;
+
+        height: 200px;
+
+        mix-blend-mode: normal;
+    }
+
+    .cta p {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    /* FOOTER */
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   CELULAR PEQUENO
+========================================= */
+
+@media (max-width: 500px) {
+
+    .header {
+        height: 65px;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding: 55px 0;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero-imagem {
+        min-height: 320px;
+    }
+
+    .hero-imagem img {
+        width: 285px;
+
+        mix-blend-mode: normal;
+    }
+
+    .frase {
+        gap: 15px 25px;
+    }
+
+    .historia {
+        padding: 70px 0;
+    }
+
+    .historia-conteudo {
+        gap: 35px;
+    }
+
+    .historia-titulo h2 {
+        font-size: 2.7rem;
+    }
+
+    .historia-texto p {
+        font-size: 0.9rem;
+    }
+
+    .historia-destaques {
+        grid-template-columns: 1fr;
+
+        margin-top: 40px;
+    }
+
+    .historia-item {
+        min-height: auto;
+    }
+
+    .secao {
+        padding: 80px 0;
+    }
+
+    .lista-recursos {
+        grid-template-columns: 1fr;
+    }
+
+    .comunidade {
+        padding: 35px 25px;
+    }
+
+    .cta {
+        width: calc(100% - 25px);
+
+        padding: 35px 20px;
+    }
+
+    .cta-pinguim {
+        width: 175px;
+
+        min-width: 175px;
+
+        height: 175px;
+    }
+
+    .cta-pinguim img {
+        width: 175px;
+
+        height: 175px;
+
+        mix-blend-mode: normal;
+    }
+}

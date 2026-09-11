@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro | Penguinismo</title>
+
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+
+    <main class="pagina-cadastro">
+
+        <section class="cadastro-card">
+
+            <!-- PINGUIM DENTRO DO CARD -->
+            <div class="logo-cadastro">
+
+                <img
+                    src="psg.png"
+                    alt="Pinguim do Penguinismo"
+                >
+
+            </div>
+
+
+            <!-- CABEÇALHO -->
+
+            <div class="cabecalho">
+
+                <span class="mini-titulo">
+                    FAÇA PARTE
+                </span>
+
+                <h1>
+                    Crie sua conta.
+                </h1>
+
+                <p>
+                    Cadastre-se para fazer parte da comunidade Penguinismo.
+                </p>
+
+            </div>
+
+
+            <form id="formCadastro">
+
+                <!-- NOME -->
+
+                <div class="campo">
+
+                    <label for="nome">
+                        Nome completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome completo"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="campo">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DATA -->
+
+                <div class="campo">
+
+                    <label for="nascimento">
+                        Data de nascimento
+                    </label>
+
+                    <input
+                        type="date"
+                        id="nascimento"
+                        name="nascimento"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CIPTEA -->
+
+                <div class="campo">
+
+                    <label for="ciptea">
+                        CIPTEA
+                    </label>
+
+                    <input
+                        type="text"
+                        id="ciptea"
+                        name="ciptea"
+                        placeholder="Digite o número da CIPTEA"
+                    >
+
+                    <small>
+                        Campo opcional. A CIPTEA é a Carteira de Identificação
+                        da Pessoa com Transtorno do Espectro Autista.
+                    </small>
+
+                </div>
+
+
+                <!-- RESPONSÁVEL -->
+
+                <div
+                    id="areaResponsavel"
+                    class="responsavel-area"
+                    style="display: none;"
+                >
+
+                    <div class="responsavel-titulo">
+
+                        <h3>
+                            Dados do responsável
+                        </h3>
+
+                        <p>
+                            Como o cadastro é de uma pessoa menor de idade,
+                            informe os dados do responsável.
+                        </p>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="responsavelNome">
+                            Nome completo do responsável
+                        </label>
+
+                        <input
+                            type="text"
+                            id="responsavelNome"
+                            placeholder="Nome completo"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="responsavelCpf">
+                            CPF do responsável
+                        </label>
+
+                        <input
+                            type="text"
+                            id="responsavelCpf"
+                            placeholder="000.000.000-00"
+                            maxlength="14"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="parentesco">
+                            Grau de parentesco
+                        </label>
+
+                        <select id="parentesco">
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="mae">
+                                Mãe
+                            </option>
+
+                            <option value="pai">
+                                Pai
+                            </option>
+
+                            <option value="avo">
+                                Avó/Avô
+                            </option>
+
+                            <option value="responsavel">
+                                Responsável legal
+                            </option>
+
+                            <option value="outro">
+                                Outro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="responsavelTelefone">
+                            Telefone do responsável
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="responsavelTelefone"
+                            placeholder="(00) 00000-0000"
+                            maxlength="15"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- SENHA -->
+
+                <div class="campo">
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Crie uma senha"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CONFIRMAR -->
+
+                <div class="campo">
+
+                    <label for="confirmarSenha">
+                        Confirmar senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmarSenha"
+                        name="confirmarSenha"
+                        placeholder="Digite a senha novamente"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- BOTÃO -->
+
+                <button
+                    type="submit"
+                    class="botao-cadastro"
+                >
+                    Criar minha conta
+                </button>
+
+
+                <!-- OU -->
+
+                <div class="ou">
+
+                    <span></span>
+
+                    <p>
+                        ou continue com
+                    </p>
+
+                    <span></span>
+
+                </div>
+
+
+                <!-- GOOGLE / APPLE -->
+
+                <div class="login-social">
+
+                    <button
+                        type="button"
+                        class="social"
+                        id="googleLogin"
+                    >
+
+                        <span class="google-icon">
+                            G
+                        </span>
+
+                        Continuar com Google
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="social"
+                        id="appleLogin"
+                    >
+
+                        <span class="apple-icon">
+                            ●
+                        </span>
+
+                        Continuar com Apple
+
+                    </button>
+
+                </div>
+
+
+                <!-- JÁ TEM CONTA -->
+
+                <div class="ja-conta">
+
+                    <p>
+                        Já tem uma conta?
+
+                        <a href="login.html">
+                            Entrar
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <!-- VOLTAR -->
+
+                <a
+                    href="index.html"
+                    class="voltar"
+                >
+                    ← Voltar para o Penguinismo
+                </a>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="cadastro.js"></script>
+
+</body>
+
+</html>

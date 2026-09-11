@@ -1,0 +1,519 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(30, 65, 95, 0.20),
+            transparent 45%
+        ),
+        #05080d;
+
+    color: #f4f7fb;
+
+    min-height: 100vh;
+}
+
+
+/* =====================================
+   PÁGINA
+===================================== */
+
+.pagina-cadastro {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+/* =====================================
+   CARD CENTRAL
+===================================== */
+
+.cadastro-card {
+
+    width: 100%;
+
+    max-width: 620px;
+
+    background: #11151c;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 28px;
+
+    padding: 40px 46px 45px;
+
+    box-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.55);
+}
+
+
+/* =====================================
+   PINGUIM
+===================================== */
+
+.logo-cadastro {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.logo-cadastro img {
+
+    width: 190px;
+
+    height: 125px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 18px;
+
+    display: block;
+}
+
+
+/* =====================================
+   CABEÇALHO
+===================================== */
+
+.cabecalho {
+
+    text-align: left;
+
+    margin-bottom: 32px;
+}
+
+
+.mini-titulo {
+
+    display: block;
+
+    color: #8acbff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+.cabecalho h1 {
+
+    font-size: 43px;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 12px;
+}
+
+
+.cabecalho p {
+
+    color: #9ca8b8;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   CAMPOS
+===================================== */
+
+.campo {
+
+    margin-bottom: 21px;
+}
+
+
+.campo label {
+
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 9px;
+}
+
+
+.campo input,
+.campo select {
+
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 15px;
+
+    background: #080b10;
+
+    color: #f4f7fb;
+
+    border: 1px solid #29313b;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+
+.campo input::placeholder {
+
+    color: #687588;
+}
+
+
+.campo input:focus,
+.campo select:focus {
+
+    border-color: #8acbff;
+
+    box-shadow:
+        0 0 0 3px rgba(138, 203, 255, 0.10);
+}
+
+
+.campo input[type="date"] {
+
+    color-scheme: dark;
+}
+
+
+.campo small {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: #718096;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================
+   RESPONSÁVEL
+===================================== */
+
+.responsavel-area {
+
+    padding: 24px;
+
+    margin: 25px 0;
+
+    border-radius: 18px;
+
+    background: rgba(138, 203, 255, 0.05);
+
+    border: 1px solid rgba(138, 203, 255, 0.15);
+}
+
+
+.responsavel-titulo {
+
+    margin-bottom: 20px;
+}
+
+
+.responsavel-titulo h3 {
+
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+
+.responsavel-titulo p {
+
+    color: #8996a8;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================
+   BOTÃO
+===================================== */
+
+.botao-cadastro {
+
+    width: 100%;
+
+    height: 54px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #8acbff;
+
+    color: #071018;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.botao-cadastro:hover {
+
+    background: #a4d8ff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   DIVISOR
+===================================== */
+
+.ou {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 28px 0 20px;
+}
+
+
+.ou span {
+
+    height: 1px;
+
+    flex: 1;
+
+    background: #29313b;
+}
+
+
+.ou p {
+
+    color: #687588;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================
+   GOOGLE / APPLE
+===================================== */
+
+.login-social {
+
+    display: flex;
+
+    gap: 12px;
+}
+
+
+.social {
+
+    flex: 1;
+
+    height: 50px;
+
+    border: 1px solid #2a313b;
+
+    border-radius: 12px;
+
+    background: #0a0e14;
+
+    color: #f4f7fb;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    transition: 0.2s;
+}
+
+
+.social:hover {
+
+    background: #111720;
+
+    border-color: #47515f;
+}
+
+
+.google-icon {
+
+    color: #4285f4;
+
+    font-size: 19px;
+
+    font-weight: 900;
+}
+
+
+.apple-icon {
+
+    color: white;
+
+    font-size: 16px;
+}
+
+
+/* =====================================
+   JÁ TEM CONTA
+===================================== */
+
+.ja-conta {
+
+    text-align: center;
+
+    margin-top: 27px;
+}
+
+
+.ja-conta p {
+
+    color: #8996a8;
+
+    font-size: 13px;
+}
+
+
+.ja-conta a {
+
+    color: #8acbff;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.ja-conta a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   VOLTAR
+===================================== */
+
+.voltar {
+
+    display: block;
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #657285;
+
+    font-size: 12px;
+
+    text-decoration: none;
+}
+
+
+.voltar:hover {
+
+    color: #8acbff;
+}
+
+
+/* =====================================
+   CELULAR
+===================================== */
+
+@media (max-width: 650px) {
+
+    .pagina-cadastro {
+
+        padding: 25px 12px;
+    }
+
+
+    .cadastro-card {
+
+        padding: 32px 22px;
+
+        border-radius: 22px;
+    }
+
+
+    .logo-cadastro img {
+
+        width: 160px;
+
+        height: 105px;
+    }
+
+
+    .cabecalho h1 {
+
+        font-size: 34px;
+    }
+
+
+    .login-social {
+
+        flex-direction: column;
+    }
+
+}
